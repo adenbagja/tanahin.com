@@ -28,8 +28,6 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="jobs.php">Browse Jobs</a></li>
-                <li><a href="jobseekers.php">Job-Sekeers</a></li>
                 <li><a href="jobs.php">Sewa Tanah</a></li>
                 <li><a href="jobseekers.php">Jual-beli Tanah</a></li>
               </ul>
@@ -57,31 +55,30 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="img/a2.jpeg" alt="First slide">
+          <img class="first-slide" src="img/a2.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1 style="color:#53b7f4">Get Your Dream Job Now</h1>
-              <p style="color:#24141e">Get Instant Acess To Today's Most Wonderful Hiring Tools-Post Jobs and Streamline Your Entire Hiring Process</p>
+              <h1 style="color:#53b7f4">Investasi produk lokal</h1>
+              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik</p>
               <p><a class="btn btn-lg btn-primary" href="login.php" role="button">Login</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="img/a3.jpeg" alt="Second slide">
+          <img class="second-slide" src="img/a4.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1 style="color:#53b7f4">Hire Better Talent</h1>
-              <p style="color:#24141e">Get The Coolest Employess for Your Company,Hire Fresh Talent or Experienced View Their Resume and Select The Best</p>
-              <p><a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign-Up</a></p>
+              <h1 style="color:#53b7f4">Investasi produk lokal</h1>
+              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="img/a4.jpeg" alt="Third slide">
+          <img class="third-slide" src="img/a1.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1 style="color:#53b7f4">Search Thousands of Jobs</h1>
-              <p style="color:#24141e">Build and Post Your Resume and Access Thousands of Pages of Career Info and Advice</p>
+              <h1 style="color:#53b7f4">Investasi produk lokal</h1>
+              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik</p>
               <p><a class="btn btn-lg btn-primary" href="jobs.php" role="button">Browse Jobs</a></p>
             </div>
           </div>
