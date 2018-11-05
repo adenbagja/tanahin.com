@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Jobs Finder-Land Your Dream Job</title>
+		<title>Tanahin.com</title>
 		<meta charset="utf-8">
    		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,12 +24,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.php">Jobs Finder</a>
+              <a class="navbar-brand" href="index.php">Tanahin.com</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="jobs.php">Browse Jobs</a></li>
                 <li><a href="jobseekers.php">Job-Sekeers</a></li>
+                <li><a href="jobs.php">Sewa Tanah</a></li>
+                <li><a href="jobseekers.php">Jual-beli Tanah</a></li>
               </ul>
               <ul class="nav navbar-nav pull-right">
               	<?php if(isset($_SESSION['user'])): ?>
@@ -55,7 +57,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="img/1.jpg" alt="First slide">
+          <img class="first-slide" src="img/a2.jpeg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Get Your Dream Job Now</h1>
@@ -65,7 +67,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="img/2.jpg" alt="Second slide">
+          <img class="second-slide" src="img/a3.jpeg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Hire Better Talent</h1>
@@ -75,7 +77,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="img/3.jpg" alt="Third slide">
+          <img class="third-slide" src="img/a4.jpeg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Search Thousands of Jobs</h1>
