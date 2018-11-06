@@ -28,6 +28,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
+                <li><a href="jobs.php">Investasi</a></li>
                 <li><a href="jobs.php">Sewa Tanah</a></li>
                 <li><a href="jobseekers.php">Jual-beli Tanah</a></li>
               </ul>
@@ -59,8 +60,13 @@
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Investasi produk lokal</h1>
-              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik</p>
-              <p><a class="btn btn-lg btn-primary" href="login.php" role="button">Login</a></p>
+              <!-- <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik</p> -->
+              <div>
+                <a class="btn btn-lg btn-primary" href="login.php" role="button">Investasi</a>
+                <a class="btn btn-lg btn-danger" href="login.php" role="button">Sewa tanah</a>
+                <a class="btn btn-lg btn-primary" href="login.php" role="button">jual-beli tanah</a>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -69,7 +75,9 @@
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Investasi produk lokal</h1>
-              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik
+              <a class="btn btn-lg btn-primary" href="login.php" role="button">Investasi</a>
+              <a class="btn btn-lg btn-danger" href="login.php" role="button">Sewa tanah</a>
+              <a class="btn btn-lg btn-primary" href="login.php" role="button">jual-beli tanah</a>
             </div>
           </div>
         </div>
@@ -78,8 +86,9 @@
           <div class="container">
             <div class="carousel-caption">
               <h1 style="color:#53b7f4">Investasi produk lokal</h1>
-              <p style="color:  #FF0000">Segera berivestasi untuk kehidupan yang lebih baik</p>
-              <p><a class="btn btn-lg btn-primary" href="jobs.php" role="button">Browse Jobs</a></p>
+              <a class="btn btn-lg btn-primary" href="login.php" role="button">Investasi</a>
+              <a class="btn btn-lg btn-danger" href="login.php" role="button">Sewa tanah</a>
+              <a class="btn btn-lg btn-primary" href="login.php" role="button">jual-beli tanah</a>
             </div>
           </div>
         </div>
