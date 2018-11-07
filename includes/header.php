@@ -9,14 +9,14 @@
    		 <link rel="stylesheet" type="text/css" href="css/style.css">
          <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<style>
+<!-- <style>
    body{
    	background: url(img/32.jpg); 
    	background-size: 100% 100%;
    	background-repeat: no-repeat;
    	color: #ffffff;
    }
- </style>
+ </style> -->
 <body>
   <!-- Nav Bar-->
 	<nav class="navbar navbar-inverse">

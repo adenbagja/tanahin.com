@@ -22,9 +22,11 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 			<td><?php echo $nomor; ?></td>
 			<td><?php echo $pecah['nama'] ?></td>
 			<td><?php echo $pecah['alamat'] ?></td>
-			<td><?php echo $pecah['foto'] ?></td>
 			<td>
-				<a href="" class="btn btn-danger">hapus</a>
+					<img src="../foto/<?php echo $pecah['foto'];?>" width="100px">
+			</td>
+			<td>
+				<a href="index.php?halaman=hapususer&id=<?php echo $pecah['id']; ?>" class="btn-danger btn">hapus</a>
 			</td>
 		</tr>
 		<?php $nomor++; ?>
@@ -32,4 +34,5 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 	</tbody>
 </table>
 
-<a href="index.php?halaman=tambahpelanggan" class="btn btn-primary">tambah data user</a>
+<a href="index.php?halaman=tambahuser" class="btn btn-primary">tambah data user</a>
+

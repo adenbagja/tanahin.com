@@ -4,13 +4,13 @@ session_start();
 include '../config/config.php';
 
    //redirect bila belum login
-    if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user'])) {
         # code...
-         echo "<script>location:'login.php';<script>";
-         header('location:login.php');
-         exit();
+   echo "<script>location:'login.php';<script>";
+   header('location:login.php');
+   exit();
 
-   }
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,15 +52,16 @@ include '../config/config.php';
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li class="text-center">
-                        <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                        <img src="assets/img/find_user.png" class="user-image img-responsive" width="100" />
                     </li>
 
 
                     <li><a  href="index.php"><i class="fa fa-dashboard fa-3x"></i> Home</a></li>
                     <li><a  href="index.php?halaman=user"><i class="fa fa-dashboard fa-3x"></i> Users</a></li>
                     <li><a  href="index.php?halaman=investasi"><i class="fa fa-dashboard fa-3x"></i> Investasi</a></li>
-                    <li><a  href="index.php?halaman=sewatanah"><i class="fa fa-dashboard fa-3x"></i> Sewa tanah</a></li>
-                    <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Jual beli</a></li>
+                    <li><a  href="index.php?halaman=sewatanah"><i class="fa fa-dashboard fa-3x"  ></i> Sewa tanah</a></li>
+                    <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Pembelian</a></li>
+                     <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Penjualan</a></li>
                     <li><a  href="index.php?halaman=logout"><i class="fa fa-dashboard fa-3x"></i> Logout</a></li>
 
                 </ul>
@@ -84,9 +85,19 @@ include '../config/config.php';
                         include 'sewatanah.php';
                     }
 
+                    elseif ($_GET['halaman']=="tambahdatasewa") 
+                    {
+                        include 'tambahdatasewa.php';
+                    }
+
                     elseif ($_GET['halaman']=="investasi") 
                     {
                         include 'investasi.php';
+                    }
+
+                    elseif ($_GET['halaman']=="tambahdatainvestasi") 
+                    {
+                        include 'tambahdatainvestasi.php';
                     }
 
                     elseif ($_GET['halaman']=="logout") 
@@ -115,6 +126,14 @@ include '../config/config.php';
                     }
                     elseif ($_GET['halaman']=="user") {
                         include 'user.php';
+                    }
+
+                    elseif ($_GET['halaman']=="tambahuser") {
+                        include 'tambahuser.php';
+                    }
+
+                    elseif ($_GET['halaman']=="hapususer") {
+                        include 'hapususer.php';
                     }
                 }
 
