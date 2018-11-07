@@ -57,8 +57,9 @@ $koneksi = new mysqli("localhost", "root", "", "jobsfind");
 
 
                     <li><a  href="index.php"><i class="fa fa-dashboard fa-3x"></i> Home</a></li>
-                    <li><a  href="index.php?halaman=produk"><i class="fa fa-dashboard fa-3x"></i> Investasi</a></li>
-                    <li><a  href="index.php?halaman=pembelian"><i class="fa fa-dashboard fa-3x"></i> Sewa tanah</a></li>
+                    <li><a  href="index.php?halaman=user"><i class="fa fa-dashboard fa-3x"></i> Users</a></li>
+                    <li><a  href="index.php?halaman=investasi"><i class="fa fa-dashboard fa-3x"></i> Investasi</a></li>
+                    <li><a  href="index.php?halaman=sewatanah"><i class="fa fa-dashboard fa-3x"></i> Sewa tanah</a></li>
                     <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Jual beli</a></li>
                     <li><a  href="index.php?halaman=logout"><i class="fa fa-dashboard fa-3x"></i> Logout</a></li>
 
@@ -78,14 +79,14 @@ $koneksi = new mysqli("localhost", "root", "", "jobsfind");
                         include 'produk.php';
                     }
 
-                    elseif ($_GET['halaman']=="pembelian") 
+                    elseif ($_GET['halaman']=="sewatanah") 
                     {
-                        include 'pembelian.php';
+                        include 'sewatanah.php';
                     }
 
-                    elseif ($_GET['halaman']=="pelanggan") 
+                    elseif ($_GET['halaman']=="investasi") 
                     {
-                        include 'pelanggan.php';
+                        include 'investasi.php';
                     }
 
                     elseif ($_GET['halaman']=="logout") 
@@ -111,6 +112,9 @@ $koneksi = new mysqli("localhost", "root", "", "jobsfind");
                     }
                     elseif ($_GET['halaman']=="logout") {
                         include 'logout.php';
+                    }
+                    elseif ($_GET['halaman']=="user") {
+                        include 'user.php';
                     }
                 }
 

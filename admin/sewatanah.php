@@ -1,5 +1,7 @@
 <h2>ini bagian pembelian</h2>
-
+<?php 
+$koneksi = new mysqli("localhost", "root", "", "jobsfind");
+ ?>
 <table class=table table-bordered>
 	<thead>
 		<tr>
@@ -12,15 +14,15 @@
 	</thead>
 	<tbody>
 		<?php $nomor=1; ?>
-		<?php $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan"); ?>
+		<?php $ambil=$koneksi->query("SELECT * FROM sewa_tanah"); ?>
 		<?php while($pecah = $ambil->fetch_assoc()) { ?>
 		<tr>
 			<td><?php echo $nomor; ?></td>
-			<td><?php echo $pecah['nama_pelanggan'] ?></td>
-			<td><?php echo $pecah['tgl_pembelian'] ?></td>
-			<td><?php echo $pecah['total_pembelian'] ?></td>
+			<td><?php echo $pecah['nama'] ?></td>
+			<td><?php echo $pecah['alamat'] ?></td>
+			<td><?php echo $pecah['luas'] ?></td>
 			<td>
-				<a href="index.php?halaman=detail&id=<?php  echo $pecah['id_pembelian'];?>" class="btn btn-info">detail</a>
+				<a href="index.php?halaman=detail&id=<?php  echo $pecah['id_pembelian'];?>" class="btn btn-danger">hapus</a>
 			</td>
 		</tr>
 		<?php $nomor++; ?>
