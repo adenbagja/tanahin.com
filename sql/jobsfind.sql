@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2016 at 09:40 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
+-- Generation Time: Nov 07, 2018 at 03:12 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `jobsfind`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nama` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama`) VALUES
+(1, 'admin', 'admin', 'aden');
 
 -- --------------------------------------------------------
 
@@ -73,6 +93,31 @@ INSERT INTO `jobs` (`id`, `title`, `description`, `location`, `category_id`, `co
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `resume`
+--
+
+CREATE TABLE `resume` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `designation` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `exp` int(11) NOT NULL,
+  `edu` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `resume`
+--
+
+INSERT INTO `resume` (`id`, `user_id`, `name`, `email`, `phone`, `designation`, `description`, `exp`, `edu`) VALUES
+(1, 2, 'Rishabh Jain', 'rishabhjain3022@gmail.com', '+918878983022', 'Java Developer', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 'Bachelor of Engineering Computer Science ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `type`
 --
 
@@ -109,12 +154,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_type`, `email`, `password`) VALUES
-(1, 'Rohit', 'Jain', 1, 'rohit_j@live.com', 'rj7775668'),
-(2, 'Rishabh', 'Jain', 2, 'rishabhjain3022@gmail.com', '123456');
+(4, 'aden', 'bagja', 1, 'aden@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `categories`
@@ -126,6 +176,12 @@ ALTER TABLE `categories`
 -- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resume`
+--
+ALTER TABLE `resume`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -145,6 +201,11 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
@@ -155,6 +216,11 @@ ALTER TABLE `categories`
 ALTER TABLE `jobs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
+-- AUTO_INCREMENT for table `resume`
+--
+ALTER TABLE `resume`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
@@ -163,7 +229,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

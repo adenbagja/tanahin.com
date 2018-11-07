@@ -22,15 +22,15 @@
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <li> <a class="navbar-brand" href="index.php">Jobs Finder</a></li>
+	      <li> <a class="navbar-brand" href="index.php">Tanahin.com</a></li>
 	    </div>
 	    <ul class="nav navbar-nav">
-	       <li><a href="jobs.php">Jobs</a></li>
+	       <li><a href="jobs.php">Investasi</a></li>
 	       <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1): ?>
-	       <li><a href="addjob.php">Add Job</a></li>
+	       <li><a href="addjob.php">Sewa tanah</a></li>
 	       <?php endif; ?>
 		   <?php if(isset($_SESSION['user_type'])&& $_SESSION['user_type']==1): ?>
-			<li><a href="jobseekers.php">Job-Seekers</a></li>
+			<li><a href="jobseekers.php">Beli tanah</a></li>
 		   <?php endif; ?>
 			<?php if(isset($_SESSION['user_type'])&& $_SESSION['user_type']==2): ?>
 				<li><a href="buildresume.php">Build Resume</a></li>
