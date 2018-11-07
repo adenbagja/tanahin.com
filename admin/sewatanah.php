@@ -1,14 +1,14 @@
 <h2>ini bagian pembelian</h2>
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "jobsfind");
+$koneksi = new mysqli("localhost", "root", "", "tan");
  ?>
 <table class=table table-bordered>
 	<thead>
 		<tr>
 			<th>No</th>
-			<th>Nama Pelanggan</th>
-			<th>Tanggal</th>
-			<th>Total</th>
+			<th>Nama </th>
+			<th>Alamat</th>
+			<th>luas</th>
 			<th>Aksi</th>
 		</tr>
 	</thead>

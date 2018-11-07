@@ -1,6 +1,6 @@
 <h2>Data Investasi</h2>
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "jobsfind");
+$koneksi = new mysqli("localhost", "root", "", "tan");
  ?>
 
 <table class=table table-bordered>

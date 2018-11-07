@@ -1,7 +1,7 @@
 <?php 
 session_start();
     //koneksi ke database
-$koneksi = new mysqli("localhost", "root", "", "jobsfind");
+include '../config/config.php';
 
    //redirect bila belum login
     if (!isset($_SESSION['user'])) {
