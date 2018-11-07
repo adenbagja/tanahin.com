@@ -26,7 +26,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 					<img src="../foto/<?php echo $pecah['foto'];?>" width="100px">
 				</td>
 				<td>
-					<a href="index.php?halaman=detail&id=<?php  echo $pecah['id_pembelian'];?>" class="btn btn-danger">hapus</a>
+					<a href="index.php?halaman=hapussewa&id=<?php echo $pecah['id_sewa']; ?>" class="btn btn-danger">hapus</a>
 				</td>
 			</tr>
 			<?php $nomor++; ?>

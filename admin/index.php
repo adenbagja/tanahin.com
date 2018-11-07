@@ -85,6 +85,11 @@ if (!isset($_SESSION['user'])) {
                         include 'sewatanah.php';
                     }
 
+                    elseif ($_GET['halaman']=="hapussewa") 
+                    {
+                        include 'hapussewa.php';
+                    }
+
                     elseif ($_GET['halaman']=="tambahdatasewa") 
                     {
                         include 'tambahdatasewa.php';
@@ -93,6 +98,11 @@ if (!isset($_SESSION['user'])) {
                     elseif ($_GET['halaman']=="investasi") 
                     {
                         include 'investasi.php';
+                    }
+
+                    elseif ($_GET['halaman']=="hapusinvestasi") 
+                    {
+                        include 'hapusinvestasi.php';
                     }
 
                     elseif ($_GET['halaman']=="tambahdatainvestasi") 
