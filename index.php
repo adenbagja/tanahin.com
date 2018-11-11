@@ -30,7 +30,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="investasi.php">Investasi</a></li>
                 <li><a href="sewa.php">Sewa Tanah</a></li>
-                <li><a href="jobseekers.php">Jual-beli Tanah</a></li>
+                <li><a href="jualbeli.php">Jual-beli Tanah</a></li>
               </ul>
               <ul class="nav navbar-nav pull-right">
               	<?php if(isset($_SESSION['user'])): ?>

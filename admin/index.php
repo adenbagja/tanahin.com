@@ -61,7 +61,7 @@ if (!isset($_SESSION['admin'])) {
                     <li><a  href="index.php?halaman=investasi"><i class="fa fa-dashboard fa-3x"></i> Investasi</a></li>
                     <li><a  href="index.php?halaman=sewatanah"><i class="fa fa-dashboard fa-3x"  ></i> Sewa tanah</a></li>
                     <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Pembelian</a></li>
-                     <li><a  href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Penjualan</a></li>
+                     <li><a  href="index.php?halaman=penjualan"><i class="fa fa-dashboard fa-3x"></i> Penjualan</a></li>
                     <li><a  href="index.php?halaman=logout"><i class="fa fa-dashboard fa-3x"></i> Logout</a></li>
 
                 </ul>
@@ -144,6 +144,18 @@ if (!isset($_SESSION['admin'])) {
 
                     elseif ($_GET['halaman']=="hapususer") {
                         include 'hapususer.php';
+                    }
+
+                    elseif ($_GET['halaman']=="penjualan") {
+                        include 'penjualan.php';
+                    }
+
+                    elseif ($_GET['halaman']=="hapuspenjualan") {
+                        include 'hapuspenjualan.php';
+                    }
+
+                    elseif ($_GET['halaman']=="tambahpenjualan") {
+                        include 'tambahpenjualan.php';
                     }
                 }
 
