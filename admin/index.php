@@ -1,10 +1,10 @@
 <?php 
 session_start();
     //koneksi ke database
-include '../config/config.php';
-
+//include '../config/config.php';
+$koneksi = new mysqli("localhost", "root", "", "tan");
    //redirect bila belum login
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['admin'])) {
         # code...
    echo "<script>location:'login.php';<script>";
    header('location:login.php');

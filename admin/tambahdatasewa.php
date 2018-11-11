@@ -27,12 +27,12 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
  {
  	$nama = $_FILES['foto']['name'];
  	$lokasi = $_FILES['foto']['tmp_name'];
- 	move_uploaded_file($lokasi, "../foto/".$nama);
+ 	move_uploaded_file($lokasi, "../foto_sewa/".$nama);
  	$koneksi->query("INSERT INTO sewa 
  		(nama, alamat, luas, foto) 
  		VALUES('$_POST[nama]','$_POST[alamat]' ,'$_POST[luas]','$nama')");
 
  	echo "<div class='alert alert-info'>Data Tersimpan</div>";
- 	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=user'>"; 
+ 	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=sewatanah'>"; 
  }
  ?>

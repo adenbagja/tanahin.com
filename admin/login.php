@@ -1,11 +1,9 @@
 
-<?php include '../config/config.php'; ?>
-<?php  include '../lib/Database.php'; ?>
 
  <?php
 //script connection
  session_start();
-// $koneksi = new mysqli("localhost", "root", "", "findsjob");
+ $koneksi = new mysqli("localhost", "root", "", "tan");
 ?>
 
 <!DOCTYPE html>
@@ -65,31 +63,19 @@
 							<hr />
 							Not register ? <a href="registeration.html" >click here </a> 
 						</form>
-						<?php
-						$db = new Database();
-						if(isset($_POST['login']))
-						{
-							$username = $_POST['user'];
-							$password = $_POST['password'];
-							$query = "SELECT * FROM admin WHERE username ='$username' AND password ='$password'";
-							$result = $db->select($query);
-							if($result){
-								 $row  = $result->fetch_assoc();
-								 $count = $result->num_rows;
-								//header('Location: index.php');
+					<?php
+						if(isset($_POST['login'])){
+							$ambil=$koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]' AND password='$_POST[password]' ");
 
-							 	if($count == 1){
-							 		echo 'sukses';
-							 		$_SESSION['user']      = $username;
-							 		$_SESSION['id'] = $row['id'];
-							 		$_SESSION['user_type'] = $row['user_type'];
-							 		header('Location: index.php');
-							 	}
-							 }
-							else{
-									
-								echo 'your username and password is invalid';
-							 }
+							$yangcocok = $ambil->num_rows;
+							if($yangcocok ==1){
+								$_SESSION['admin'] = $ambil->fetch_assoc();
+								echo '<div class="alert alert-info">Login Sukses</div> ';
+								echo '<meta http-equiv="refresh" content="1;url=index.php">';
+							}else{
+								echo '<div class="alert alert-danger">Login Gagal</div>';
+								echo '<meta http-equiv="refresh" content="1;url=login.php"> ';
+							}
 						}
 						?>
 					</div>
@@ -114,3 +100,4 @@
 
 </body>
 </html>
+

@@ -28,8 +28,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="jobs.php">Investasi</a></li>
-                <li><a href="jobs.php">Sewa Tanah</a></li>
+                <li><a href="investasi.php">Investasi</a></li>
+                <li><a href="sewa.php">Sewa Tanah</a></li>
                 <li><a href="jobseekers.php">Jual-beli Tanah</a></li>
               </ul>
               <ul class="nav navbar-nav pull-right">

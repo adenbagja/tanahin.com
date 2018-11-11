@@ -27,7 +27,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
  {
  	$nama = $_FILES['foto']['name'];
  	$lokasi = $_FILES['foto']['tmp_name'];
- 	move_uploaded_file($lokasi, "../foto/".$nama);
+ 	move_uploaded_file($lokasi, "../foto_investasi/".$nama);
  	$koneksi->query("INSERT INTO investasi 
  		(nama, persentase, alamat, foto) 
  		VALUES('$_POST[nama]','$_POST[persentase]','$_POST[alamat]','$nama')");
