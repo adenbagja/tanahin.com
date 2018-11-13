@@ -56,24 +56,8 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 
 <?php include 'includes/footer.php'; ?>
 
-<!-- <div class="container"> -->
-				<!-- <h1>Produk Terbaru</h1>
-
-				<div class="row">
-
-					<?php $ambil = $koneksi->query("SELECT * FROM produk"); ?>
-					<?php while ($perproduk = $ambil->fetch_assoc()){ ?>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="db_foto/<?php echo $perproduk['foto_produk']; ?>" width="200" height="40"   >
-								<div class="caption">
-									<h3><?php echo $perproduk['nama_produk'] ?></h3>
-									<h5>Rp. <?php echo $perproduk['harga_produk'] ?></h5>
-									<a href="beli.php?id=<?php echo $perproduk['id_produk']; ?> " class="btn btn-primary">Beli</a>
-								</div>
-							</div>	
-						</div>
-					<?php } ?>
-				</div>
-			</div>
-		</section> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</body>
+</html>
