@@ -1,7 +1,7 @@
 
 <h2>Data User</h2>
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "tan");
+include '../config/config.php';
  ?>
 
 <table class=table table-bordered>

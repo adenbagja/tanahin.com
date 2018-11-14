@@ -1,5 +1,5 @@
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "tan");
+include '../config/config.php';
 $ambil = $koneksi->query("SELECT * FROM penjualan WHERE id='$_GET[id]'");
 $pecah = $ambil->fetch_assoc();
 $fotouser = $pecah['foto'];

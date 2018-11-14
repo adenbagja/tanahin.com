@@ -3,7 +3,7 @@
  <?php
 //script connection
  session_start();
- $koneksi = new mysqli("localhost", "root", "", "tan");
+ include '../config/config.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 
 
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "tan");
+include 'config/config.php';
 ?>
 
 <!doctype html>

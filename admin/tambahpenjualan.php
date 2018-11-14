@@ -1,6 +1,6 @@
 <h2>tambah data Penjualan</h2>
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "tan");
+include '../config/config.php';
  ?>
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
@@ -38,6 +38,6 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
  		VALUES('$_POST[nama_pemilik]','$_POST[alamat]' ,'$_POST[luas]', '$_POST[harga]', '$nama')");
 
  	echo "<div class='alert alert-info'>Data Tersimpan</div>";
- 	 echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=penjualan'>"; 
+ 	cho "<meta http-equiv='refresh' content='1;url=index.php?halaman=penjualan'>"; 
  }
  ?>

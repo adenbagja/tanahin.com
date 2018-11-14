@@ -1,6 +1,6 @@
 <h2>tambah data investasi</h2>
 <?php 
-$koneksi = new mysqli("localhost", "root", "", "tan");
+include '../config/config.php';
  ?>
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
