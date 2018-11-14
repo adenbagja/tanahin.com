@@ -15,7 +15,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 <link rel="stylesheet" href="css/custom.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<title>Investasi</title>
+<title>Jual Beli</title>
 </head>
 
 <body>
@@ -62,7 +62,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 <div class="container pt-5">
    
 	<div class="row">
-	  <h3>Investasi Yang Sedang Berjalan</h3>
+	  <h3>Jual Beli</h3>
 	</div>
 		<div class="row">
 		<div class="underline"></div>
@@ -78,7 +78,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 		<div class="col-md-3">
 			<div class="card view zoom">
 				<div class="mask flex-center"></div>
-				<img src="foto_penjualan/<?php echo $perproduk['foto']; ?>" class="card-img-top" width="200" height="40">
+				<img src="foto_penjualan/<?php echo $perproduk['foto']; ?>" class="card-img-top" >
 				<div class="card-body">
 					<h5>Rp. <?php echo $perproduk['nama_pemilik'] ?></h5>
 					<h6> <?php echo $perproduk['harga'] ?></h6>

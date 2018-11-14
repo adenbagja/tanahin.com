@@ -60,7 +60,7 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 <div class="container pt-5">
    
 	<div class="row">
-	  <h3>Investasi Yang Sedang Berjalan</h3>
+	  <h3>Tanah yang disewakan</h3>
 	</div>
 		<div class="row">
 		<div class="underline"></div>
@@ -76,11 +76,11 @@ $koneksi = new mysqli("localhost", "root", "", "tan");
 		<div class="col-md-3">
 			<div class="card view zoom">
 				<div class="mask flex-center"></div>
-				<img src="foto_sewa/<?php echo $perproduk['foto']; ?>" class="card-img-top" width="200" height="40">
+				<img src="foto_sewa/<?php echo $perproduk['foto']; ?>" class="card-img-top" >
 				<div class="card-body">
 					<h5><?php echo $perproduk['nama'] ?></h5>
-					<h6> <?php echo $perproduk['luas'] ?>%</h6>
-					<h6> <?php echo $perproduk['alamat'] ?></h6>
+					<h6> <?php echo $perproduk['luas'] ?>m2</h6>
+					<small> <?php echo $perproduk['alamat'] ?></small>
 					<button class="btn btn-danger"><i class="fa fa-cart-plus" aria-hidden="true"></i> Sewa Tanah ini</button>
 				</div>
 			</div>
