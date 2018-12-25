@@ -1,5 +1,5 @@
 <?php include 'includes/header.php'; ?>
-<?php  include 'config/config.php';?>
+<!-- <?php  include 'config/config.php';?> -->
 <?php include 'lib/Database.php';?>
 <?php
      $db = new Database();

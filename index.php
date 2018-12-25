@@ -105,42 +105,7 @@
     
       <!-- START THE FEATURETTES -->
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Looking for Job <span class="text-muted">This'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5" >
-          <img class="featurette-image img-responsive center-block" src="img/5.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="img/6.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">You Got Your Dream Job</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="img/4.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
+    
       <!-- /END THE FEATURETTES -->
      <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -154,16 +119,16 @@
     </div>
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Rohit Jain</h2>
+          <img class="img-circle" src="img/a.jpeg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Aden Bagja</h2>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="img/harshit.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Harshit Singh Chouhan</h2>
+          <img class="img-circle" src="img/32.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Tedi Tian </h2>
         </div>
         <div class="col-lg-4">
-          <img class="img-circle" src="img/rahul.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Rahul Jha</h2>
+          <img class="img-circle" src="img/32.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Rifqi</h2>
         </div>
       </div><!-- /.row -->
 
@@ -172,7 +137,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 JobsFinder &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; tanahin.com &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
 
