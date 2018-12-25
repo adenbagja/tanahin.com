@@ -1,74 +1,174 @@
-<?php include 'includes/header.php'; ?>
-<!-- <?php  include 'config/config.php';?> -->
-<?php include 'lib/Database.php';?>
-<?php
-     $db = new Database();
-    //Grab User Type
-    $query = "SELECT * FROM type";
-    $result = $db->select($query);
-  //users registration
-  if(isset($_POST['submit']))
-  {
-	  $firstname = $_POST['first_name'];
-	  $lastname = $_POST['last_name'];
-	  $email = $_POST['email'];
-	  $password = $_POST['password'];
-	  $password2 = $_POST['password2'];
-	  $user_type =$_POST['role'];
-	  //validation
-	  if($firstname == ""||$lastname == ""||$email == "" || $password == "" || $password2 == "" )
-	  {
-		  echo "Please Fill in all the fields";
-	  }
-	  else
-	  {
-		  if($password != $password2){
-			  echo "password do not match";
-			  header('Location:register.php');
-		  }
-		  else{
-			  $query = "INSERT INTO users (first_name,last_name,user_type,email,password)
-                          VALUES ('$firstname','$lastname','$user_type','$email','$password')";
-			  $insert_row = $db->insert($query);
-			  if($insert_row){
-				  $_SESSION['user'] = $email;
-				  header("Location: index.php");
-			  }
-		  }
-	  }
-  }
-?>
- <?php if(isset($_SESSION['user'])): ?>
-	<?php echo"you are logged in !"; ?>
-	<?php header("Location:index.php"); ?>
- <?php else: ?>
+<?php 
+include 'config/config.php';
+ ?>
 
-<div class="container">
+<!DOCTYPE html>
 
-	<form action="signup.php" method="post"class="form-signin">
-		<h1 class="form-signin-heading text-muted">Sign Up</h1>
-        <input type="text" class="form-control" name="first_name" placeholder="First Name" required />
-        <br>
-        <input type="text" class="form-control" name="last_name" placeholder="Last Name" required />
-        <br>
-		<input type="email" class="form-control" name="email" placeholder="Email address" required />
-		<br>
-		<input type="password" name="password" class="form-control" placeholder="Password" required />
-		<br>
-		<input type="password" name="password2" class="form-control" placeholder="Confrim Password" required />
-		<br>
-		<select name="role" class="form-control">
-			<?php while($row = $result->fetch_assoc()): ?>
-				<option value="<?php echo $row['id']; ?>">
-						<?php echo $row['user_type']; ?>
-				</option>
-			<?php endwhile; ?>
-		</select>
-		<br>
-		<input class="btn btn-lg btn-primary btn-block" name="submit" type="submit" value="Sign Up" />
-	</form>
+<html lang="en">
 
-</div>
-<?php endif; ?>
+<head>
 
-<?php include 'includes/footer.php'; ?>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>Tanahin.com</title>
+
+	<link rel="stylesheet" type="text/css" href="js/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="js/css/my-login.css">
+
+</head>
+
+<body class="my-login-page">
+
+	<section class="h-100">
+
+		<div class="container h-100">
+
+			<div class="row justify-content-md-center h-100">
+
+				<div class="card-wrapper">
+
+					<div class="brand">
+
+
+
+
+					</div>
+
+					<div class="card fat">
+
+						<div class="card-body">
+
+							<h4 class="card-title">Register</h4>
+
+							<form method="POST" class="my-login-validation" novalidate="">
+
+								<div class="form-group">
+
+									<label for="name">Name</label>
+
+									<input id="name" type="text" class="form-control" name="name" required autofocus>
+
+									<div class="invalid-feedback">
+
+										What's your name?
+
+									</div>
+
+								</div>
+
+
+
+								<div class="form-group">
+
+									<label for="email">E-Mail Address</label>
+
+									<input id="email" type="email" class="form-control" name="email" required>
+
+									<div class="invalid-feedback">
+
+										Your email is invalid
+
+									</div>
+
+								</div>
+
+
+
+								<div class="form-group">
+
+									<label for="password">Password</label>
+
+									<input id="password" type="password" class="form-control" name="password" required data-eye>
+
+									<div class="invalid-feedback">
+
+										Password is required
+
+									</div>
+
+								</div>
+
+
+
+								<div class="form-group">
+
+									<div class="custom-checkbox custom-control">
+
+										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+
+										<label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
+
+										<div class="invalid-feedback">
+
+											You must agree with our Terms and Conditions
+
+										</div>
+
+									</div>
+
+								</div>
+
+
+
+								<div class="form-group m-0">
+
+									<button type="submit" class="btn btn-primary btn-block" name="submit">
+
+										Register
+
+									</button>
+
+								</div>
+
+								<div class="mt-4 text-center">
+
+									Already have an account? <a href="login.php">Login</a>
+
+								</div>
+
+							</form>
+
+						</div>
+
+					</div>
+					<?php 
+ if(isset($_POST['submit']))
+ {
+ 	
+ 	$koneksi->query("INSERT INTO users
+ 		(nama, email, password ) 
+ 		VALUES('$_POST[name]','$_POST[email]' ,'$_POST[password]')");
+
+ 	echo "<div class='alert alert-info'>Data Tersimpan</div>";
+ 	echo "<meta http-equiv='refresh' content='1;url=login.php'>"; 
+ }
+ ?>
+
+					<div class="footer">
+
+						Copyright &copy; 2017 &mdash; tanahin.com
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<script src="js/jquery.min.js"></script>
+
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/my-login.js"></script>
+
+</body>
+
+</html>
