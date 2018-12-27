@@ -70,7 +70,7 @@ include 'config/config.php';
 					<h5><?php echo $perproduk['nama'] ?></h5>
 					<h6> <?php echo $perproduk['luas'] ?>m2</h6>
 					<small> <?php echo $perproduk['alamat'] ?></small>
-					<button class="btn btn-danger"><i class="fa fa-cart-plus" aria-hidden="true"></i> Sewa Tanah ini</button>
+					<button class="btn btn-danger" style="width: 150px"><i class="fa fa-cart-plus" aria-hidden="true"></i> Sewa Tanah</button><button class="btn btn-danger" href="lokasi.html" ><i class="fa fa-home"></i></button>
 				</div>
 			</div>
 		</div>
