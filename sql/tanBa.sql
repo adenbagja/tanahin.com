@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 07, 2018 at 11:26 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Host: 127.0.0.1
+-- Generation Time: Jan 04, 2019 at 03:29 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -85,7 +85,14 @@ CREATE TABLE `investasi` (
 --
 
 INSERT INTO `investasi` (`id`, `nama`, `persentase`, `alamat`, `foto`) VALUES
-(1, 'Tanah', 15, 'Sukabumi', 'foto.txt');
+(14, 'Sayuran Segar', 15, 'Sukabumi, Sukaraja', 'peria.jpg'),
+(15, 'Sayuran Segar', 13, 'Cikarang, Kp. Pilar Barat', 'selada.jpg'),
+(16, 'Sayuran ', 14, 'Sumedang, Tanjung Sari', 'cabe.jpg'),
+(17, 'Sayuran ', 11, 'Cibitung, Cikarang Barat', 'bawang-merah.jpg'),
+(18, 'Sayuran ', 10, 'Kerawang', 'tomat.jpg'),
+(19, 'Sayuran ', 14, 'Sukabumi, Sukaraja', 'petai.jpg'),
+(20, 'Sayuran ', 11, 'Sumedang, Tanjung Sari', 'jamur_tiram.jpg'),
+(21, 'Sayuran ', 13, 'Cikarang, Kp. Pilar Barat', 'bawang-putih.jpg');
 
 -- --------------------------------------------------------
 
@@ -116,6 +123,31 @@ INSERT INTO `jobs` (`id`, `title`, `description`, `location`, `category_id`, `co
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `penjualan`
+--
+
+CREATE TABLE `penjualan` (
+  `id` int(11) NOT NULL,
+  `nama_pemilik` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `harga` int(11) NOT NULL,
+  `luas` int(6) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penjualan`
+--
+
+INSERT INTO `penjualan` (`id`, `nama_pemilik`, `alamat`, `harga`, `luas`, `foto`) VALUES
+(11, 'Budi', 'Sukabumi, Sukaraja', 10000000, 300, '5.jpg'),
+(12, 'Arman', 'Cibitung, Cikarang Barat', 12000000, 1000, '9.jpg'),
+(13, 'Galih', 'Sumedang, Tanjung Sari', 9000000, 1000, '11.jpg'),
+(14, 'Andika', 'Kerawang', 10000000, 300, '14.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resume`
 --
 
@@ -141,22 +173,30 @@ INSERT INTO `resume` (`id`, `user_id`, `name`, `email`, `phone`, `designation`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sewa_tanah`
+-- Table structure for table `sewa`
 --
 
-CREATE TABLE `sewa_tanah` (
-  `id_sewa_tanah` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
+CREATE TABLE `sewa` (
+  `id_sewa` int(11) NOT NULL,
+  `nama` varchar(30) NOT NULL,
   `alamat` varchar(50) NOT NULL,
-  `luas` int(11) NOT NULL
+  `luas` int(11) NOT NULL,
+  `foto` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sewa_tanah`
+-- Dumping data for table `sewa`
 --
 
-INSERT INTO `sewa_tanah` (`id_sewa_tanah`, `nama`, `alamat`, `luas`) VALUES
-(1, 'Tanah Di sukabumi', 'Sukabumi', 1000);
+INSERT INTO `sewa` (`id_sewa`, `nama`, `alamat`, `luas`, `foto`) VALUES
+(5, 'Sewa Tanah Sukabumi', 'Jl. Langensari SUkaraja Sukabumi', 1000, 'b7bf5b77-a589-4e92-96bc-bc6aae7e291e.jpeg'),
+(6, 'Sewa tanah', 'Jl. bekicot no6', 1000, '425b35d6-647a-406b-865f-51ad02ecd9c1.jpeg'),
+(7, 'Tanah kosong', 'jl. palakan salak no 7', 5000, '647cc4f8-12f9-4436-a398-2d5a85921462.jpeg'),
+(8, 'Tanah Disewakan', 'Jl. doa ibu 7', 2500, 'd5d1a46f-b25e-4bd3-aa03-de920c70c7b3.jpeg'),
+(10, 'sewa tanah', 'Cikarang, Kp. Pilar Barat', 2000, '20.jpg'),
+(11, 'sewa tanah', 'Cibitung, Cikarang Barat', 1000, '19.jpg'),
+(12, 'sewa tanah', 'Sukabumi, Sukaraja', 1500, '18.jpg'),
+(13, 'sewa rumah', 'Cikarang, Kp. Pilar Barat', 300, '15.jpg');
 
 -- --------------------------------------------------------
 
@@ -194,13 +234,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `nama`, `user_type`, `email`, `password`, `alamat`, `foto`) VALUES
-(4, 'aden', 1, 'aden@gmail.com', '123', 'Sukabumi', 'foto.txt\r\n');
-
---
 -- Indexes for dumped tables
 --
 
@@ -223,16 +256,22 @@ ALTER TABLE `jobs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `penjualan`
+--
+ALTER TABLE `penjualan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `resume`
 --
 ALTER TABLE `resume`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sewa_tanah`
+-- Indexes for table `sewa`
 --
-ALTER TABLE `sewa_tanah`
-  ADD PRIMARY KEY (`id_sewa_tanah`);
+ALTER TABLE `sewa`
+  ADD PRIMARY KEY (`id_sewa`);
 
 --
 -- Indexes for table `type`
@@ -260,7 +299,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `investasi`
 --
 ALTER TABLE `investasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -269,16 +308,22 @@ ALTER TABLE `jobs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `penjualan`
+--
+ALTER TABLE `penjualan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `resume`
 --
 ALTER TABLE `resume`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `sewa_tanah`
+-- AUTO_INCREMENT for table `sewa`
 --
-ALTER TABLE `sewa_tanah`
-  MODIFY `id_sewa_tanah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `sewa`
+  MODIFY `id_sewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `type`
@@ -290,7 +335,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

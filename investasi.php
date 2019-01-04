@@ -65,7 +65,7 @@ include 'config/config.php';
 		<div class="col-md-3">
 			<div class="card view zoom">
 				<div class="mask flex-center"></div>
-				<img src="foto_investasi/<?php echo $perproduk['foto']; ?>" class="card-img-top" width="200" height="40">
+				<img src="foto_investasi/<?php echo $perproduk['foto']; ?>" class="card-img-top">
 				<div class="card-body">
 					<h5><?php echo $perproduk['nama'] ?></h5>
 					<h6> <?php echo $perproduk['persentase'] ?>%</h6>

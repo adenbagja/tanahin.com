@@ -70,7 +70,7 @@ include 'config/config.php';
 					<h6> <?php echo $perproduk['harga'] ?></h6>
 					<h6> <?php echo $perproduk['luas'] ?>%</h6>
 					<h6> <?php echo $perproduk['alamat'] ?></h6>
-					<button class="btn btn-danger"><i class="fa fa-cart-plus" aria-hidden="true"></i> Lihat Selengkapnya</button>
+					<button class="btn btn-danger" style="width: 150px"><i class="fa fa-cart-plus" aria-hidden="true"></i> Detail</button><button class="btn btn-danger" href="lokasi.html" ><i class="fa fa-home"></i></button>
 				</div>
 			</div>
 		</div>

@@ -38,6 +38,6 @@ include '../config/config.php';
  		VALUES('$_POST[nama_pemilik]','$_POST[alamat]' ,'$_POST[luas]', '$_POST[harga]', '$nama')");
 
  	echo "<div class='alert alert-info'>Data Tersimpan</div>";
- 	cho "<meta http-equiv='refresh' content='1;url=index.php?halaman=penjualan'>"; 
+ 	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=penjualan'>"; 
  }
  ?>
